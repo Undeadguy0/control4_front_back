@@ -1,0 +1,280 @@
+.technology-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.back-link {
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #3182ce;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.detail-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-info h1 {
+    margin: 0 0 20px 0;
+    color: #2d3748;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.tech-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta-label {
+    font-size: 14px;
+    color: #718096;
+    font-weight: 600;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    width: fit-content;
+}
+
+.status:hover {
+    transform: scale(1.05);
+}
+
+.status-не-начато {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.status-в-процессе {
+    background: #feebc8;
+    color: #d69e2e;
+}
+
+.status-завершено {
+    background: #c6f6d5;
+    color: #276749;
+}
+
+.category, .difficulty, .date {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.description-section,
+.notes-section,
+.resources-section,
+.deadline-section {
+    margin-bottom: 30px;
+}
+
+.description-section h3,
+.notes-section h3,
+.resources-section h3,
+.deadline-section h3 {
+    margin: 0 0 12px 0;
+    color: #2d3748;
+    font-size: 1.3em;
+}
+
+.description-section p {
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 0;
+}
+
+.notes-textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+}
+
+.notes-textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+}
+
+.notes-hint {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 8px;
+}
+
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resource-link {
+    color: #4299e1;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.resource-link:hover {
+    background: #ebf8ff;
+    border-color: #4299e1;
+}
+
+.edit-input,
+.edit-select,
+.edit-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+}
+
+.edit-input:focus,
+.edit-select:focus,
+.edit-textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+}
+
+.edit-input.large {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 16px;
+}
+
+.edit-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #4299e1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3182ce;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e0;
+}
+
+.btn-danger {
+    background: #f56565;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #e53e3e;
+}
+
+.not-found {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.not-found h1 {
+    color: #718096;
+    margin-bottom: 16px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .technology-detail {
+        padding: 16px;
+    }
+
+    .detail-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .main-info h1 {
+        font-size: 2em;
+    }
+
+    .tech-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-actions {
+        flex-direction: column;
+    }
+}

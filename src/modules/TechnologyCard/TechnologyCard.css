@@ -1,0 +1,107 @@
+.Tech-card {
+    margin-left: 10px;
+    max-width: 1000px;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.Tech-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: #3498db;
+}
+
+.Tech-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.Tech-card-button {
+    border-width: 3px;
+    border-radius: 12px;
+    width: 300px;
+    height: 60px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Цвета статусов с градиентами */
+.Tech-card-button.state-Не\ начато {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    border-color: #ff4757;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.Tech-card-button.state-В\ процессе {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    border-color: #00d2d3;
+    color: white;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.Tech-card-button.state-Завершено {
+    background: linear-gradient(135deg, #45b7d1 0%, #3a92ab 100%);
+    border-color: #2e86de;
+    color: white;
+    box-shadow: 0 4px 15px rgba(69, 183, 209, 0.3);
+}
+
+.Tech-card-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.Tech-card-button:active {
+    transform: scale(0.98);
+}
+
+.Tech-card-name {
+    font-size: 40px;
+    flex: 1;
+    font-weight: 700;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .Tech-card {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .Tech-card-row {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .Tech-card-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .Tech-card-name {
+        font-size: 32px;
+        text-align: center;
+    }
+}
